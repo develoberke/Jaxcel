@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.apache.poi:poi-ooxml:5.2.2")
+    implementation("org.apache.poi:poi-ooxml:5.3.0")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
 
