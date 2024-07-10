@@ -21,15 +21,17 @@ class Jaxcel {
             val workbook = XSSFWorkbook()
             val sheet = workbook.createSheet(T::class.java.simpleName)
 
+            val firstRow = sheet.createRow(0)
             T::class.java.declaredFields.forEachIndexed { index, field ->
-                val row = sheet.createRow(0)
-                val cell = row.createCell(index)
+                field.isAccessible = true
+                val cell = firstRow.createCell(index)
                 cell.setCellValue(field.name)
             }
 
             data.forEachIndexed { index, item ->
                 val row = sheet.createRow(index + 1)
                 T::class.java.declaredFields.forEachIndexed { fieldIndex, field ->
+                    field.isAccessible = true
                     val cell = row.createCell(fieldIndex)
                     cell.setCellValue(field.get(item).toString())
                 }
