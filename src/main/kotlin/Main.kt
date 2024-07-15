@@ -10,5 +10,5 @@ fun main() {
         User(4, "Jane Smith", "mail@mail.com", "password")
     )
 
-    Jaxcel.generateExcelFile(users, "users.xlsx")
+    Jaxcel.generateExcelFile(data = users, fileName = "users", clazz = User::class.java)
 }
