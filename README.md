@@ -40,7 +40,7 @@ Jaxcel.generateExcelWorkbook(List<yourData>, YourClass.class)
 
 
 
-
+<!--
 ## Maven dependency
 
 
@@ -51,6 +51,7 @@ Jaxcel.generateExcelWorkbook(List<yourData>, YourClass.class)
   <version>1.0-SNAPSHOT</version>
 </dependency>
 ```
+-->
 
 ## Quick Overview
 
